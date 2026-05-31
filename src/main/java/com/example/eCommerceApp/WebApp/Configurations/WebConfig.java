@@ -30,7 +30,8 @@ public void addCorsMappings(CorsRegistry registry) {
                     "http://127.0.0.1:5500",
                     "https://my-ecart-app.netlify.app"
             )
-            .allowedMethods("*")
-            .allowedHeaders("*");
-    }
+            .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+            .allowedHeaders("*")
+            .allowCredentials(true);
+}
 }
